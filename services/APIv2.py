@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 def predict(time):
-    url = f"http://api.weatherapi.com/v1/forecast.json?key=64a6a1f0619944a687d123221211705&q=San Francisco&days={time}&aqi=yes&alerts=yes"
+    url = f"http://api.weatherapi.com/v1/forecast.json?key=64a6a1f0619944a687d123221211705&q=San Francisco&days={time}"
     response = requests.get(url)
     prediction = response.json()['forecast']['forecastday']
     resultado = []
